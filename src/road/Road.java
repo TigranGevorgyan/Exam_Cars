@@ -8,29 +8,29 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Road {
 
-    ArrayList<RoadBlocks> road = new ArrayList<>();
+    public ArrayList<RoadBlocks> roadBloks = new ArrayList<>();
 
     public ArrayList<RoadBlocks> makeRoad(int lenght){
         for (int i = 0; i < lenght; i++){
             int random = ThreadLocalRandom.current().nextInt(0, 4);
             switch (random){
                 case 0:
-                    road.add(new GoodRoadBlock());
+                    roadBloks.add(new GoodRoadBlock());
                     break;
                 case 1:
-                    road.add(new NormalRoadBlock());
+                    roadBloks.add(new NormalRoadBlock());
                     break;
                 case 2:
-                    road.add(new BadRoadBlock());
+                    roadBloks.add(new BadRoadBlock());
                     break;
                 case 3:
-                    road.add(new VeryBadRoadBlock());
+                    roadBloks.add(new VeryBadRoadBlock());
                     break;
             }
         }
         System.out.println("Road are maked.");
-        System.out.println("Road lenght is: " + lenght);
-        return road;
+        System.out.println("Road lenght is: " + roadBloks.size());
+        return roadBloks;
     }
 
     public int getResistence(){

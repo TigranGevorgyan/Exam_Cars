@@ -62,9 +62,12 @@ public abstract class Car {
 
     public int modifiedMethod(){
         try {
-            if (Car.road.getResistence() != 1)
-                return (getSpeed() / (Car.road.getResistence() / 2));
-            else return getSpeed();
+            if (road.getResistence() != 1) {
+                if (type.equals("S"))
+                    return (getSpeed() / (Car.road.getResistence() * 2));
+                else
+                    return (getSpeed() / (Car.road.getResistence() / 2));
+            } else return getSpeed();
         }catch (ArithmeticException e){
             return getSpeed();
         }
@@ -72,6 +75,6 @@ public abstract class Car {
 
     @Override
     public String toString() {
-        return type + ". " + name + ", " + weight + ", time " + iteration;
+        return type + ". " + name + ", " + weight + ", time " + iteration * 10;
     }
 }
