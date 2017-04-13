@@ -2,6 +2,9 @@ package cars;
 
 import engine.Engine;
 import road.Road;
+import road.RoadBlocks;
+
+import java.util.ArrayList;
 
 /**
  * Created by Taron on 04/08/17.
@@ -14,6 +17,9 @@ public abstract class Car {
     public Engine engine;
     public int passedRoad;
     public int iteration;
+
+    public Car() {
+    }
 
     public Car(String type, String name, int weight, Engine engine) {
         this.type = type;
@@ -55,23 +61,10 @@ public abstract class Car {
     }
 
     public int getSpeed() {
-        return (engine.power * 100) / weight;
+            return (engine.power * 100) / weight;
     }
 
     public abstract int getModifiedSpeed();
-
-    public int modifiedMethod(){
-        try {
-            if (road.getResistence() != 1) {
-                if (type.equals("S"))
-                    return (getSpeed() / (Car.road.getResistence() * 2));
-                else
-                    return (getSpeed() / (Car.road.getResistence() / 2));
-            } else return getSpeed();
-        }catch (ArithmeticException e){
-            return getSpeed();
-        }
-    }
 
     @Override
     public String toString() {

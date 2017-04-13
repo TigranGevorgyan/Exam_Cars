@@ -1,11 +1,12 @@
 package road;
 
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Created by Taron on 04/08/17.
  */
-public class RoadBlocks extends Road {
+public abstract class RoadBlocks {
 
-    public int getResistence() {
-        return 0;
-    }
+    public abstract int getResistence();
 }

@@ -8,7 +8,8 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Road {
 
-    public ArrayList<RoadBlocks> roadBloks = new ArrayList<>();
+
+    public static ArrayList<RoadBlocks> roadBloks = new ArrayList<>();
 
     public ArrayList<RoadBlocks> makeRoad(int lenght){
         for (int i = 0; i < lenght; i++){
@@ -33,8 +34,13 @@ public class Road {
         return roadBloks;
     }
 
-    public int getResistence(){
-        return 0;
+    public ArrayList<RoadBlocks> getRoadBloks(){
+        return roadBloks;
     }
+
+
+
+
+
 
 }

@@ -5,6 +5,8 @@ package road;
  */
 public class GoodRoadBlock extends RoadBlocks {
 
+
+    @Override
     public int getResistence() {
         return 1;
     }

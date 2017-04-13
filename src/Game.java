@@ -3,6 +3,7 @@ import cars.JeepCar;
 import cars.SportCar;
 import engine.Engine;
 import road.Road;
+import road.RoadBlocks;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -113,9 +114,9 @@ public class Game {
         category();
         System.out.println("----------------------------");
         motion();
+        System.out.println(road.getRoadBloks().size());
         System.out.println("------------------------------");
         sorting();
     }
-
 
 }
