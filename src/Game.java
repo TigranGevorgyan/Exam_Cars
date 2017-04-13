@@ -114,7 +114,6 @@ public class Game {
         category();
         System.out.println("----------------------------");
         motion();
-        System.out.println(road.getRoadBloks().size());
         System.out.println("------------------------------");
         sorting();
     }
